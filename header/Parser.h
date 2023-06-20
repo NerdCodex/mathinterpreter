@@ -85,7 +85,6 @@ double expression(const struct Tokens **ptr) {
 }
 
 void parse(){	
-    //for(x=0;x<3;x++) printf("%s\n", tok[x].token_value);
 	const struct Tokens *ptr1 = tok;
 	double result = expression(&ptr1);
 
