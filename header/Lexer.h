@@ -17,15 +17,15 @@ void Tokenizer(char *data){
 	for (x=0;x<length;x++) {
 		if(*data=='+'){
 			strcpy(tok[x].token_type, "PLUS");
-            strcpy(tok[x].token_value, "+");
-            data++;
-            token_len++;
+            		strcpy(tok[x].token_value, "+");
+            		data++;
+            		token_len++;
 		}
 		else if(*data=='-'){
 			strcpy(tok[x].token_type, "MINUS");
-            strcpy(tok[x].token_value, "-");
-            data++;
-            token_len++;
+            		strcpy(tok[x].token_value, "-");
+            		data++;
+            		token_len++;
 		}
 
 		else if (*data=='*'){
@@ -55,13 +55,11 @@ void Tokenizer(char *data){
 				else {
 					strncat(number, data, 1);				
 				}
-				//printf("NUM:%s", number);
 				data++;
 			
 			}
 
 			if (dot == 0){
-				//printf("num:%s\n", number);
 				strcpy(tok[x].token_value, number);
 				strcpy(tok[x].token_type, "INT");
 				token_len++;
@@ -70,7 +68,6 @@ void Tokenizer(char *data){
 				strcpy(tok[x].token_value, number);
 				strcpy(tok[x].token_type, "FLOAT");
 				token_len++;
-				//strcpy(tok[x].token_value, number);
 			}
 
 			else {
@@ -82,9 +79,9 @@ void Tokenizer(char *data){
 
 		else if(*data==' '){
 			data++;
-            strcpy(tok[x].token_type, "");
-            strcpy(tok[x].token_value, "");
-            token_len++;
+            		strcpy(tok[x].token_type, "");
+            		strcpy(tok[x].token_value, "");
+            		token_len++;
 		}
 
 		else if(*data == '('){
